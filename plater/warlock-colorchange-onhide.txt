@@ -1,0 +1,8 @@
+function (self, unitId, unitFrame, envTable)
+    
+    --make plater refresh the nameplate color
+    Plater.RefreshNameplateColor (unitFrame)
+    
+    envTable.smallFlash:Stop()
+    
+end

@@ -1,0 +1,20 @@
+function (self, unitId, unitFrame, envTable)
+    
+    --adjust the nameplate color
+    Plater.SetNameplateColor (unitFrame, envTable.Color)
+    
+    --check if can replace the health amount with the unit name
+    if (envTable.ReplaceHealthWithName) then
+        
+        local healthPercent = format ("%.1f", unitFrame.healthBar.CurrentHealth / unitFrame.healthBar.CurrentHealthMax *100)
+        
+        unitFrame.healthBar.lifePercent:SetText (unitFrame.namePlateUnitName .. "  (" .. healthPercent  .. "%)")
+        
+    end
+    
+    --check if timeleft is
+    if (envTable._RemainingTime < 4.5) then
+        Plater.SetNameplateColor (unitFrame, "#F59342")
+        
+    end
+end

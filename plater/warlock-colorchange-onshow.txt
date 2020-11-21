@@ -1,0 +1,8 @@
+function (self, unitId, unitFrame, envTable)
+    
+    --check if can flash the nameplate
+    if (envTable.FlashNameplate) then
+        envTable.smallFlash:Play()
+    end
+    
+end

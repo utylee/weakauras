@@ -1,0 +1,42 @@
+function (self, unitId, unitFrame, envTable)
+    
+    --settings:
+    do
+        
+        --change the nameplate color to this color
+        --can use color names: "red", "yellow"
+        --can use color hex: "#FF0000", "#FFFF00"
+        --con use color table: {1, 0, 0}, {1, 1, 0}
+        
+        envTable.Color = "#42DDF5"
+        
+        --if true, it'll replace the health info with the unit name
+        envTable.ReplaceHealthWithName = false
+        
+        --use flash when the unit is shown in the screen
+        envTable.FlashNameplate = true
+        
+    end
+    
+    --private:
+    do
+        --create a flash for when the unit if shown
+        envTable.smallFlash = envTable.smallFlash or Plater.CreateFlash (unitFrame.healthBar, 0.15, 1, envTable.Color)
+        
+    end
+    
+end
+
+--[=[
+
+Npc IDS:
+
+141851: Spawn of G'Huun on Mythic Dungeons
+
+
+--]=]
+
+
+
+
+
